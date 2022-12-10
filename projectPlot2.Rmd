@@ -1,0 +1,151 @@
+Based on [doi.org/10.1073/pnas.07052901](https://doi-org.libproxy.utdallas.edu/10.1073/pnas.0705290104 "https://doi-org.libproxy.utdallas.edu/10.1073/pnas.0705290104")04, look at physical appearance looking for vs. self-perception and the effect of gender
+
+Variables:
+
+Time 1 (initial survey): gender, attr1_1 (preference), attr3_1 (opinion of own), attr5_1 (how think percieved)
+
+Time 2 (halfway through): attr1_s (preference), attr3_s (opinion of own)
+
+Time 3 (next day): attr7_2 (actual importance), attr1_2 (preference), attr3_2 (opinion of own), attr5_2 (how think percieved)
+
+Time 4 (3-4 weeks after): attr1_3 (preference), attr7_3 (actual importance), attr3_3 (opinion of own), attr5_3 (how think percieved)
+
+```{r}
+library(tidyverse)
+library(Hmisc)
+```
+
+```{r}
+data_path <- "speed_dating_data.csv"
+spd_dat <- read.csv(data_path)
+spddat <- subset(spd_dat, select=c(iid, gender, attr1_1, attr3_1, attr5_1,
+                                   attr1_s, attr3_s,
+                                   attr7_2, attr1_2, attr3_2, attr5_2,
+                                   attr1_3, attr7_3, attr3_3, attr5_3))
+```
+
+```{r}
+s11 <- subset(spddat, select=c(attr1_1, attr3_1, attr5_1, 
+                              attr3_s, attr3_2, attr5_2,
+                              attr3_3, attr5_3))
+#s1s <- subset(spddat, select=c(attr1_s, attr3_1, attr5_1, 
+#                              attr3_s, attr3_2, attr5_2,
+#                              attr3_3, attr5_3))
+#s72 <- subset(spddat, select=c(attr7_2, attr3_1, attr5_1, 
+#                              attr3_s, attr3_2, attr5_2,
+#                              attr3_3, attr5_3))
+#s12 <- subset(spddat, select=c(attr1_2, attr3_1, attr5_1, 
+#                              attr3_s, attr3_2, attr5_2,
+#                              attr3_3, attr5_3))
+#s13 <- subset(spddat, select=c(attr1_3, attr3_1, attr5_1, 
+#                              attr3_s, attr3_2, attr5_2,
+#                              attr3_3, attr5_3))
+#s73 <- subset(spddat, select=c(attr7_3, attr3_1, attr5_1, 
+#                              attr3_s, attr3_2, attr5_2,
+#                              attr3_3, attr5_3))
+spddats <- list(s11)
+```
+
+```{r}
+spddat.rcorr = rcorr(as.matrix(spddat))
+spddat.coeff = spddat.rcorr$r
+spddat.p = spddat.rcorr$P
+```
+
+```{r}
+coeff = data.frame(spddat.coeff)
+p = data.frame(spddat.p)
+
+coeff <- subset(coeff, select=c(attr1_1, attr1_s, attr1_2, attr7_2, attr1_3, attr7_3))
+coeff <- coeff[!(row.names(coeff) %in% c("gender", "attr1_1", "attr1_s", "attr1_2",
+                                         "attr7_2", "attr1_3", "attr7_3")),]
+p <- subset(p, select=c(attr1_1, attr1_s, attr1_2, attr7_2, attr1_3, attr7_3))
+p <- p[!(row.names(p) %in% c("gender", "attr1_1", "attr1_s", "attr1_2", "attr7_2", 
+                             "attr1_3", "attr7_3")),]
+coeff
+```
+
+```{r}
+p
+```
+
+```{r}
+ggplot(coeff, aes(attr1_1, attr1_1))+
+  geom_point() +
+  ylim(c(-.1, 1))
+ggplot(coeff, aes(attr1_s, attr1_s))+
+  geom_point() +
+  ylim(c(-.1, 1))
+ggplot(coeff, aes(attr1_2, attr1_2))+
+  geom_point() +
+  ylim(c(-.1, 1))
+ggplot(coeff, aes(attr7_2, attr7_2))+
+  geom_point() +
+  ylim(c(-.1, 1))
+ggplot(coeff, aes(attr1_3, attr1_3))+
+  geom_point() +
+  ylim(c(-.1, 1))
+ggplot(coeff, aes(attr7_3, attr7_3))+
+  geom_point() +
+  ylim(c(-.1, 1))
+```
+
+```{r}
+spddat <- subset(spddat, select=c(iid, gender, attr1_1, attr3_1))
+spddat <- na.omit(spddat)
+spddat <- unique(spddat)
+spddat %>% mutate(gender = recode(gender,
+                                  '0' = "Women",
+                                  '1' = "Men")) -> spddat
+ggplot(spddat, aes(attr3_1, attr1_1, color=gender, group=gender)) +
+  geom_point(position="jitter", alpha=0.5) +
+  geom_smooth(method="gam", formula=y ~ s(x, bs = "cs", k=8)) +
+  scale_colour_discrete(labels=c("Men", "Women"), type=c("#7b3494", "#008837")) +
+  labs(title = "Physical attractiveness preference vs. self-perception",
+       colour = "Gender") +
+  xlab("Self-Rating") +
+  ylab("Weight in Decision to Match (%)") +
+  theme_light() +
+  theme(text = element_text(family="Avenir"))
+```
+
+```{r}
+ggplot(spddat, aes(attr3_1, attr1_1)) +
+  geom_hex() +
+  labs(title = "Physical attractiveness preference vs. self-perception") +
+  xlab("Self-Rating") +
+  ylab("Weight in Decision to Match (%)") +
+  theme_light() +
+  theme(text = element_text(family="Avenir"))
+```
+
+```{r}
+ggplot(spddat, aes(attr3_1, attr1_1, color=gender)) +
+  geom_density_2d() +
+  labs(title = "Physical attractiveness preference vs. self-perception") +
+  scale_colour_discrete(labels=c("Men", "Women"), type=c("#d01c8b", "#4dac26")) +
+  scale_x_continuous(breaks=c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)) +
+  labs(title = "Physical Attractiveness",
+       subtitle = "Do participants' self-ratings impact their preferences?",
+       colour = "Gender") +
+  xlab("Self-Rating from 1-10") +
+  ylab("Weight in Decision to Match (%)") +
+  annotate("label", label="Pearson's r = 0.18, p < .001", x=5.5, y=40, family="Avenir") +
+  theme_light() +
+  theme(text = element_text(family="Avenir"))
+```
+
+```{r}
+spddatw <- subset(spddat, gender == 0)
+spddatm <- subset(spddat, gender == 1)
+spddatw.rcorr = rcorr(as.matrix(spddatw))
+spddatw.coeff = spddatw.rcorr$r
+spddatw.p = spddatw.rcorr$P
+spddatm.rcorr = rcorr(as.matrix(spddatm))
+spddatm.coeff = spddatm.rcorr$r
+spddatm.p = spddatm.rcorr$P
+print(data.frame(spddatw.coeff))
+print(data.frame(spddatw.p))
+print(data.frame(spddatm.coeff))
+print(data.frame(spddatm.p))
+```

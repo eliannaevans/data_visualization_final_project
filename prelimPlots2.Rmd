@@ -1,0 +1,1448 @@
+---
+title: "Preliminary plots"
+output: html_notebook
+---
+
+#### Plot 1
+
+x: order, goal, date, go_out, field_cd, exphappy, expnum, career_c, match_es, age, age_o
+
+y: like, like_o, attr, attr_o, sinc_o, intel_o, fun_o, amb_o, shar_o, prob_o, sinc, intel, fun, amb, shar, prob, satis_2
+
+sorting: gender, match, samerace
+
+##### Order on x-axis
+
+small effect of order: attr, sinc_o, intel_o, sinc
+
+slightly more of an effect: amb_o, intel, amb
+
+##### Goal on x-axis
+
+small effect of goal: sinc_o, fun_o, sinc, intel, fun
+
+slightly more of an effect: like, like_o, attr_o, attr, shar
+
+even more effect: prob, satis_2
+
+##### Date on x-axis
+
+Stuff here
+
+##### Go Out on x-axis
+
+small effect of go_out: attr, intel_o, prob_o
+
+slightly more of an effect: like, sinc, intel, fun
+
+even more effect: amb, shar, prob
+
+trend: like_o, attr_o, fun_o, shar_o, satis_2
+
+##### Field on x-axis
+
+small effect of field: prob_o
+
+slightly more of an effect: intel_o, prob
+
+even more effect: like_o, fun_o, amb_o
+
+most effect: like, attr, attr_o, shar_o, sinc, intel, fun, amb, shar, satis_2
+
+##### Expected Happiness on x-axis
+
+small effect of exphappy: amb
+
+slightly more of an effect: n/a
+
+even more effect: like, attr, sinc, intel, fun
+
+trend: amb_o, shar
+
+best: prob, expnum, satis_2
+
+##### Expected Number of Matches on x-axis
+
+small effect of expnum: like_o, sinc_o, amb_o
+
+slightly more of an effect: intel_o
+
+even more effect: like, attr, fun_o, intel, fun, amb
+
+trend but only one category: prob_o
+
+trend: shar_o
+
+best: attr_o, sinc, shar, prob, satis_2
+
+##### Career on x-axis
+
+small effect of career: like_o, sinc_o, intel_o
+
+slightly more of an effect: fun_o, shar_o, prob_o, amb
+
+even more effect: attr, attr_o, intel
+
+most effect: like, amb_o, sinc, fun, shar, prob, satis_2
+
+##### Expected Number of Matches (Post Speed Dating) on x-axis
+
+small effect of match_es: intel_o, fun_o
+
+slightly more of an effect: sinc_o, prob_o
+
+even more effect:
+
+trend but only one category: attr, attr_o
+
+trend: sinc
+
+best: like, intel, fun, amb
+
+best of the best: shar, prob, satis_2
+
+##### Age on x-axis (sorting with samerace rather than match)
+
+small effect of match_es: like_o, intel_o
+
+slightly more of an effect:
+
+even more effect: sinc, intel, amb, shar
+
+trend but only one category: prob_o
+
+trend: like, attr, attr_o, fun_o
+
+best: fun, prob
+
+best of the best: satis_2
+
+##### Age of partner on x-axis (sorting with samerace rather than match)
+
+small effect of match_es: intel
+
+slightly more of an effect:
+
+even more effect: attr_o, sinc_o, intel_o, amb_o, shar_o
+
+trend but only one category: prob_o
+
+trend: like, fun_o, fun, satis_2
+
+best: like_o, attr, prob_o
+
+#### Plot 2
+
+imprace, imprelig, race, race_o, age, age_o, mn_sat, income
+
+##### Importance of Race on y-axis
+
+even more effect: mn_sat
+
+best: imprelig, race, age, income
+
+##### Importance of Religion on y-axis
+
+small effect: mn_sat
+
+trend but only one category: income
+
+best: race, age
+
+#### Plot 3
+
+attr3_1, sinc3_1, intel3_1, fun3_1, amb3_1, shar3_1, also 3_s, 3_2, 3_3; 5_1, 5_2, 5_3; \_o
+
+3s over time
+
+3s vs\_ o
+
+5s vs \_o
+
+#### Plot 4
+
+attr1_1, sinc1_1, intel1_1, fun1_1, amb1_1, shar1_1, also 4_1s, 2_1s, 3_1s, 5_1s, 7_2s, 1_2s, 4_2s, 2_2s, 3_2s, 5_2s
+
+pf_o\_attr, pf_o\_sin, pf_o\_int, int_corr, pf_o\_fun, pf_o\_amb, pf_o\_sha
+
+1_1 what look for, 1_s halfway, 1_2 day after, 1_3 3-4 weeks after
+
+4_1 what others look for, 4_2 day after, 4_3 3-4 weeks after
+
+2_1 what opposite sex looks for, 2_2 day after, 2_3 3-4 weeks after
+
+3_1 "actual" attributes. 3_s halfway, 3_2 day after, 3_3 3-4 weeks after
+
+5_1 "percieved" attributes, 5_2 day after, 5_3 3-4 weeks after
+
+7_2 importance in decisions made, 7_3 3-4 weeks after
+
+#### Plot 5
+
+you_call, them_call, date_3, num_dat_3 + num_in_3
+
+#### Binary Sorting Variables
+
+match, gender, dec_o, samerace, went on a date at all (mostly null, if null=0, 99% 0 probably)
+
+#### Variables of Interest
+
+go_out, date, int_corr, field_cd
+
+#### Nat
+
+"actual" vs "percieve" vs actually precieved - maybe not time? (mini bar graphs for each attribute)
+
+between fields (grouped based on UTD schools), "who is a 5 but wants a 10" could be attractiveness or any attribute
+
+-   how often go_out based on major
+
+-   which field matches more + other variables?
+
+wake up, new variable dropped- confidence: "actual" or "percieved" / actually rated
+
+y-axis: liklihood of matching (for field_cd, if engineering, 3 matched and 10 total, then 30%), x-axis: liklihood based on (change in shiny), color: gender or samerace
+
+##### Next Day
+
+between fields who "is a 5" ("actual" attr3_1 and "percieved" attr 5_1) but wants "a 10" (attr1_1)
+
+#### Decided
+
+-   interactive point plots (ordinal lines) with y options (chance to match, chance partner says yes, chance of saying yes), x options (field, goal, go_out, date), sorting options (none for violin/smoothed plots, gender or samerace for line/smoothed plots)
+
+Load in libraries
+
+```{r}
+
+library(tidyverse)
+
+```
+
+Read in speed dating data (for preliminary graphs, only use data without nulls)
+
+```{r}
+
+data_path <- "speed_dating_data.csv"
+spd_dat <- read.csv(data_path)
+summary(spd_dat)
+
+class(spd_dat$match) = "character"
+class(spd_dat$gender) = "character"
+class(spd_dat$goal) = "character"
+class(spd_dat$samerace) = "character"
+
+spd_dat$income <- gsub(",", "", spd_dat$income)
+spd_dat$income <- as.numeric(spd_dat$income)
+
+spd_dat$mn_sat <- gsub(",", "", spd_dat$mn_sat)
+spd_dat$mn_sat <- as.numeric(spd_dat$mn_sat)
+```
+
+#### Plot 1 Code
+
+```{r}
+spd_dat_rmnagoal <- subset(spd_dat, select=c(satis_2, goal, gender, samerace, match))
+spd_dat_rmnagoal <- na.omit(spd_dat_rmnagoal)
+ggplot(spd_dat_rmnagoal, aes(x=goal, y=satis_2, group=interaction(gender, match), color=match)) +
+      geom_smooth(aes(linetype=as.character(gender)), formula=y ~ s(x, bs = "cs",k=6)) +
+      #geom_point(position = "jitter", alpha=0.05) +
+      scale_colour_discrete(labels=c("Yes", "No"), type=c("#7b3494", "#008837")) +
+      scale_linetype(labels=c("Female", "Male")) +
+      labs(colour = "Match",
+           linetype = "Gender") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+```{r}
+spd_dat_rmnagoal <- subset(spd_dat, select=c(satis_2, goal))
+spd_dat_rmnagoal <- na.omit(spd_dat_rmnagoal)
+spd_dat_rmnagoal %>% distinct() -> spd_dat_rmnagoal
+ggplot(spd_dat_rmnagoal, aes(x=goal, y=satis_2)) +
+      geom_smooth(method="gam", formula=y ~ s(x, bs = "cs",k=6)) +
+      #geom_smooth() +
+      geom_point() +
+      #geom_point(position = "jitter", alpha=0.05) +
+      #scale_colour_discrete(labels=c("0", "1"), type=c("#7b3494", "#008837")) +
+      #scale_linetype(labels=c("Female", "Male")) +
+      #labs(colour = "Gender") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+#### Plot 2 Code
+
+```{r}
+ggplot(spd_dat, aes(x=as.character(race), y=income, group=gender, color=gender)) +
+      geom_smooth(formula=y ~ s(x, bs = "cs", k=5)) +
+      geom_point(position = "jitter", alpha=0.05) +
+      scale_colour_discrete(labels=c("Women", "Men"), type=c("#7b3494", "#008837")) +
+      labs(title = "How does goal effect user-chosen variables?",
+           colour = "Gender") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+#### Plot 3 Code
+
+Plan: 3s over time (3_1, 3_s, 3_2, 3_3; attr, sinc, intel, fun, amb, prob), grouped by variable
+
+Put 3s in long form (originally wide form)
+
+```{r}
+library(reshape2)
+
+spddat3 <- subset(spd_dat, select=c(attr3_1, attr3_s, attr3_2, attr3_3,
+                                    sinc3_1, sinc3_s, sinc3_2, sinc3_3,
+                                    intel3_1, intel3_s, intel3_2, intel3_3,
+                                    fun3_1, fun3_s, fun3_2, fun3_3,
+                                    amb3_1, amb3_s, amb3_2, amb3_3))
+attr3 <- subset(spddat3, select=c(attr3_1, attr3_s, attr3_2, attr3_3))
+sinc3 <- subset(spddat3, select=c(sinc3_1, sinc3_s, sinc3_2, sinc3_3))
+intel3 <- subset(spddat3, select=c(intel3_1, intel3_s, intel3_2, intel3_3))
+fun3 <- subset(spddat3, select=c(fun3_1, fun3_s, fun3_2, fun3_3))
+amb3 <- subset(spddat3, select=c(amb3_1, amb3_s, amb3_2, amb3_3))
+
+names(attr3) <- c('1', '2', '3', '4')
+names(sinc3) <- c('1', '2', '3', '4')
+names(intel3) <- c('1', '2', '3', '4')
+names(fun3) <- c('1', '2', '3', '4')
+names(amb3) <- c('1', '2', '3', '4')
+
+attr3$type <- 'attr'
+sinc3$type <- 'sinc'
+intel3$type <- 'intel'
+fun3$type <- 'fun'
+amb3$type <- 'amb'
+
+spddat3 <- rbind(attr3, sinc3, intel3, fun3, amb3)
+
+r31 <- melt(spddat3,
+           variable.name="time")
+r31 <- na.omit(r31)
+r31$time <- as.numeric(r31$time)
+summary(r31)
+```
+
+##### Grouped By Type
+
+Make plot with value on y-axis, time on x-axis, grouped by variable
+
+```{r}
+ggplot(r31, aes(x=time, y=value, color=type, group=type)) +
+      geom_smooth(formula=y ~ s(x, bs = "cs", k=4)) +
+      scale_colour_discrete(labels=c("Ambitious","Attractive","Fun","Intelligent","Sincere"),
+                            type=c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0")) +
+      scale_x_continuous(breaks=c(1, 2, 3, 4),
+                         labels=c("Before", "During", "Day After", "3-4 Weeks After")) +
+      labs(title="How does Perception of Self Vary?",
+           subtitle="Participants rated themselves in 5 traits over course of study",
+           colour="Trait") +
+      ylab("Self Rating from 1-10") +
+      xlab("Time Rated") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+##### Grouped By Type, Actual vs. Perceived
+
+```{r}
+library(reshape2)
+
+spddat3 <- subset(spd_dat, select=c(attr3_1, attr3_2, attr3_3,
+                                    sinc3_1, sinc3_2, sinc3_3,
+                                    intel3_1, intel3_2, intel3_3,
+                                    fun3_1, fun3_2, fun3_3,
+                                    amb3_1, amb3_2, amb3_3,
+                                    attr5_1, attr5_2, attr5_3,
+                                    sinc5_1, sinc5_2, sinc5_3,
+                                    intel5_1, intel5_2, intel5_3,
+                                    fun5_1, fun5_2, fun5_3,
+                                    amb5_1, amb5_2, amb5_3))
+attr3 <- subset(spddat3, select=c(attr3_1, attr3_2, attr3_3))
+sinc3 <- subset(spddat3, select=c(sinc3_1, sinc3_2, sinc3_3))
+intel3 <- subset(spddat3, select=c(intel3_1, intel3_2, intel3_3))
+fun3 <- subset(spddat3, select=c(fun3_1, fun3_2, fun3_3))
+amb3 <- subset(spddat3, select=c(amb3_1, amb3_2, amb3_3))
+attr5 <- subset(spddat3, select=c(attr5_1, attr5_2, attr5_3))
+sinc5 <- subset(spddat3, select=c(sinc5_1, sinc5_2, sinc5_3))
+intel5 <- subset(spddat3, select=c(intel5_1, intel5_2, intel5_3))
+fun5 <- subset(spddat3, select=c(fun5_1, fun5_2, fun5_3))
+amb5 <- subset(spddat3, select=c(amb5_1, amb5_2, amb5_3))
+
+names(attr3) <- c('1', '2', '3')
+names(sinc3) <- c('1', '2', '3')
+names(intel3) <- c('1', '2', '3')
+names(fun3) <- c('1', '2', '3')
+names(amb3) <- c('1', '2', '3')
+names(attr5) <- c('1', '2', '3')
+names(sinc5) <- c('1', '2', '3')
+names(intel5) <- c('1', '2', '3')
+names(fun5) <- c('1', '2', '3')
+names(amb5) <- c('1', '2', '3')
+
+attr3$type <- 'attr'
+sinc3$type <- 'sinc'
+intel3$type <- 'intel'
+fun3$type <- 'fun'
+amb3$type <- 'amb'
+attr5$type <- 'attr'
+sinc5$type <- 'sinc'
+intel5$type <- 'intel'
+fun5$type <- 'fun'
+amb5$type <- 'amb'
+
+attr3$actual <- 'a'
+sinc3$actual <- 'a'
+intel3$actual <- 'a'
+fun3$actual <- 'a'
+amb3$actual <- 'a'
+attr5$actual <- 'p'
+sinc5$actual <- 'p'
+intel5$actual <- 'p'
+fun5$actual <- 'p'
+amb5$actual <- 'p'
+
+spddat3 <- rbind(attr3, sinc3, intel3, fun3, amb3, attr5, sinc5, intel5, fun5, amb5)
+
+r32 <- melt(spddat3,
+           variable.name="time")
+r32 <- na.omit(r32)
+r32$time <- as.numeric(r32$time)
+summary(r32)
+```
+
+Add lineweight for between "actual" and "perceived"
+
+```{r}
+ggplot(r32, aes(x=time, y=value, color=type, group=interaction(type, actual))) +
+      geom_smooth(aes(linetype=actual),
+                  formula=y ~ s(x, bs = "cs", k=3)) +
+      scale_colour_discrete(labels=c("Ambitious","Attractive","Fun","Intelligent","Sincere"),
+                            type=c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0")) +
+      scale_x_continuous(breaks=c(1, 2, 3),
+                         labels=c("Before", "Day After", "3-4 Weeks After")) +
+      scale_linetype(labels=c("Actual", "Percieved")) +
+      labs(title="Actual vs. Perception As Rated By Participants",
+           subtitle="Participants rated themselves as they are and as they are percieved",
+           colour="Trait",
+           linetype="Rated As") +
+      ylab("Self Rating from 1-10") +
+      xlab("Time Rated") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+##### Grouped By Type, Percieved vs. Rated
+
+```{r}
+library(reshape2)
+
+spddat3 <- subset(spd_dat, select=c(attr3_1, attr3_2, attr3_3,
+                                    sinc3_1, sinc3_2, sinc3_3,
+                                    intel3_1, intel3_2, intel3_3,
+                                    fun3_1, fun3_2, fun3_3,
+                                    amb3_1, amb3_2, amb3_3,
+                                    attr_o, sinc_o, intel_o, fun_o, amb_o))
+attr3 <- subset(spddat3, select=c(attr3_1, attr3_2, attr3_3))
+sinc3 <- subset(spddat3, select=c(sinc3_1, sinc3_2, sinc3_3))
+intel3 <- subset(spddat3, select=c(intel3_1, intel3_2, intel3_3))
+fun3 <- subset(spddat3, select=c(fun3_1, fun3_2, fun3_3))
+amb3 <- subset(spddat3, select=c(amb3_1, amb3_2, amb3_3))
+
+attr_o <- data.frame(spddat3$attr_o, spddat3$attr_o, spddat3$attr_o)
+sinc_o <- data.frame(spddat3$sinc_o, spddat3$sinc_o, spddat3$sinc_o)
+intel_o <- data.frame(spddat3$intel_o, spddat3$intel_o, spddat3$intel_o)
+fun_o <- data.frame(spddat3$fun_o, spddat3$fun_o, spddat3$fun_o)
+amb_o <- data.frame(spddat3$amb_o, spddat3$amb_o, spddat3$amb_o)
+
+names(attr3) <- c('1', '2', '3')
+names(sinc3) <- c('1', '2', '3')
+names(intel3) <- c('1', '2', '3')
+names(fun3) <- c('1', '2', '3')
+names(amb3) <- c('1', '2', '3')
+names(attr_o) <- c('1', '2', '3')
+names(sinc_o) <- c('1', '2', '3')
+names(intel_o) <- c('1', '2', '3')
+names(fun_o) <- c('1', '2', '3')
+names(amb_o) <- c('1', '2', '3')
+
+attr3$type <- 'attr'
+sinc3$type <- 'sinc'
+intel3$type <- 'intel'
+fun3$type <- 'fun'
+amb3$type <- 'amb'
+attr_o$type <- 'attr'
+sinc_o$type <- 'sinc'
+intel_o$type <- 'intel'
+fun_o$type <- 'fun'
+amb_o$type <- 'amb'
+
+attr3$self <- 's'
+sinc3$self <- 's'
+intel3$self <- 's'
+fun3$self <- 's'
+amb3$self <- 's'
+attr_o$self <- 'o'
+sinc_o$self <- 'o'
+intel_o$self <- 'o'
+fun_o$self <- 'o'
+amb_o$self <- 'o'
+
+spddat3 <- rbind(attr3, sinc3, intel3, fun3, amb3, attr_o, sinc_o, intel_o, fun_o, amb_o)
+
+r33 <- melt(spddat3,
+           variable.name="time")
+r33 <- na.omit(r33)
+r33$time <- as.numeric(r33$time)
+summary(r33)
+```
+
+Add lineweight for between "percieved" and other's rating
+
+```{r}
+ggplot(r33, aes(x=time, y=value, color=type, group=interaction(type, self))) +
+      geom_smooth(aes(linetype=self),
+                  formula=y ~ s(x, bs = "cs", k=3)) +
+      scale_colour_discrete(labels=c("Ambitious","Attractive","Fun","Intelligent","Sincere"),
+                            type=c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0")) +
+      scale_x_continuous(breaks=c(1, 2, 3),
+                         labels=c("Before", "Day After", "3-4 Weeks After")) +
+      scale_linetype(labels=c("Rated", "Percieved")) +
+      labs(title="Theoretical Perception vs. Rating",
+           subtitle="How participants thought they were percieved vs. their ratings",
+           colour="Trait",
+           linetype="") +
+      ylab("Rating from 1-10") +
+      xlab("Time Rated") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+##### Group By Type, Actual vs. Rated
+
+```{r}
+library(reshape2)
+
+spddat3 <- subset(spd_dat, select=c(attr5_1, attr5_2, attr5_3,
+                                    sinc5_1, sinc5_2, sinc5_3,
+                                    intel5_1, intel5_2, intel5_3,
+                                    fun5_1, fun5_2, fun5_3,
+                                    amb5_1, amb5_2, amb5_3,
+                                    attr_o, sinc_o, intel_o, fun_o, amb_o))
+attr5 <- subset(spddat3, select=c(attr5_1, attr5_2, attr5_3))
+sinc5 <- subset(spddat3, select=c(sinc5_1, sinc5_2, sinc5_3))
+intel5 <- subset(spddat3, select=c(intel5_1, intel5_2, intel5_3))
+fun5 <- subset(spddat3, select=c(fun5_1, fun5_2, fun5_3))
+amb5 <- subset(spddat3, select=c(amb5_1, amb5_2, amb5_3))
+
+attr_o <- data.frame(spddat3$attr_o, spddat3$attr_o, spddat3$attr_o)
+sinc_o <- data.frame(spddat3$sinc_o, spddat3$sinc_o, spddat3$sinc_o)
+intel_o <- data.frame(spddat3$intel_o, spddat3$intel_o, spddat3$intel_o)
+fun_o <- data.frame(spddat3$fun_o, spddat3$fun_o, spddat3$fun_o)
+amb_o <- data.frame(spddat3$amb_o, spddat3$amb_o, spddat3$amb_o)
+
+names(attr5) <- c('1', '2', '3')
+names(sinc5) <- c('1', '2', '3')
+names(intel5) <- c('1', '2', '3')
+names(fun5) <- c('1', '2', '3')
+names(amb5) <- c('1', '2', '3')
+names(attr_o) <- c('1', '2', '3')
+names(sinc_o) <- c('1', '2', '3')
+names(intel_o) <- c('1', '2', '3')
+names(fun_o) <- c('1', '2', '3')
+names(amb_o) <- c('1', '2', '3')
+
+attr5$type <- 'attr'
+sinc5$type <- 'sinc'
+intel5$type <- 'intel'
+fun5$type <- 'fun'
+amb5$type <- 'amb'
+attr_o$type <- 'attr'
+sinc_o$type <- 'sinc'
+intel_o$type <- 'intel'
+fun_o$type <- 'fun'
+amb_o$type <- 'amb'
+
+attr5$self <- 's'
+sinc5$self <- 's'
+intel5$self <- 's'
+fun5$self <- 's'
+amb5$self <- 's'
+attr_o$self <- 'o'
+sinc_o$self <- 'o'
+intel_o$self <- 'o'
+fun_o$self <- 'o'
+amb_o$self <- 'o'
+
+spddat3 <- rbind(attr5, sinc5, intel5, fun5, amb5, attr_o, sinc_o, intel_o, fun_o, amb_o)
+
+r34 <- melt(spddat3,
+           variable.name="time")
+r34 <- na.omit(r34)
+r34$time <- as.numeric(r34$time)
+summary(r34)
+```
+
+Add lineweight for between "actual" and others' rating
+
+```{r}
+ggplot(r34, aes(x=time, y=value, color=type, group=interaction(type, self))) +
+      geom_smooth(aes(linetype=self),
+                  formula=y ~ s(x, bs = "cs", k=3)) +
+      scale_colour_discrete(labels=c("Ambitious","Attractive","Fun","Intelligent","Sincere"),
+                            type=c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0")) +
+      scale_x_continuous(breaks=c(1, 2, 3),
+                         labels=c("Before", "Day After", "3-4 Weeks After")) +
+      scale_linetype(labels=c("Other", "Self")) +
+      labs(title="Self Rating vs. Rated By Partners",
+           subtitle="Participants rated themselves in 5 traits over course of study",
+           colour="Trait",
+           linetype="Rated By") +
+      ylab("Rating from 1-10") +
+      xlab("Time Rated") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+#### Plot 4 Code
+
+##### Group by Type, you vs. others looking for
+
+```{r}
+library(reshape2)
+
+spddat4 <- subset(spd_dat, select=c(attr1_1, attr1_2, attr1_3,
+                                    sinc1_1, sinc1_2, sinc1_3,
+                                    intel1_1, intel1_2, intel1_3,
+                                    fun1_1, fun1_2, fun1_3,
+                                    amb1_1, amb1_2, amb1_3,
+                                    attr4_1, attr4_2, attr4_3,
+                                    sinc4_1, sinc4_2, sinc4_3,
+                                    intel4_1, intel4_2, intel4_3,
+                                    fun4_1, fun4_2, fun4_3,
+                                    amb4_1, amb4_2, amb4_3))
+attr1 <- subset(spddat4, select=c(attr1_1, attr1_2, attr1_3))
+sinc1 <- subset(spddat4, select=c(sinc1_1, sinc1_2, sinc1_3))
+intel1 <- subset(spddat4, select=c(intel1_1, intel1_2, intel1_3))
+fun1 <- subset(spddat4, select=c(fun1_1, fun1_2, fun1_3))
+amb1 <- subset(spddat4, select=c(amb1_1, amb1_2, amb1_3))
+attr4 <- subset(spddat4, select=c(attr4_1, attr4_2, attr4_3))
+sinc4 <- subset(spddat4, select=c(sinc4_1, sinc4_2, sinc4_3))
+intel4 <- subset(spddat4, select=c(intel4_1, intel4_2, intel4_3))
+fun4 <- subset(spddat4, select=c(fun4_1, fun4_2, fun4_3))
+amb4 <- subset(spddat4, select=c(amb4_1, amb4_2, amb4_3))
+
+names(attr1) <- c('1', '2', '3')
+names(sinc1) <- c('1', '2', '3')
+names(intel1) <- c('1', '2', '3')
+names(fun1) <- c('1', '2', '3')
+names(amb1) <- c('1', '2', '3')
+names(attr4) <- c('1', '2', '3')
+names(sinc4) <- c('1', '2', '3')
+names(intel4) <- c('1', '2', '3')
+names(fun4) <- c('1', '2', '3')
+names(amb4) <- c('1', '2', '3')
+
+attr1$type <- 'attr'
+sinc1$type <- 'sinc'
+intel1$type <- 'intel'
+fun1$type <- 'fun'
+amb1$type <- 'amb'
+attr4$type <- 'attr'
+sinc4$type <- 'sinc'
+intel4$type <- 'intel'
+fun4$type <- 'fun'
+amb4$type <- 'amb'
+
+attr1$others <- 's'
+sinc1$others <- 's'
+intel1$others <- 's'
+fun1$others <- 's'
+amb1$others <- 's'
+attr4$others <- 'o'
+sinc4$others <- 'o'
+intel4$others <- 'o'
+fun4$others <- 'o'
+amb4$others <- 'o'
+
+spddat4 <- rbind(attr1, sinc1, intel1, fun1, amb1, attr4, sinc4, intel4, fun4, amb4)
+
+r41 <- melt(spddat4,
+           variable.name="time")
+r41 <- na.omit(r41)
+r41$time <- as.numeric(r41$time)
+summary(r41)
+```
+
+What look for vs. what others looks for (1s vs 4s)
+
+```{r}
+ggplot(r41, aes(x=time, y=value, color=type, group=interaction(type, others))) +
+      geom_smooth(aes(linetype=others),
+                  formula=y ~ s(x, bs = "cs", k=3)) +
+      scale_colour_discrete(labels=c("Ambitious","Attractive","Fun","Intelligent","Sincere"),
+                            type=c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0")) +
+      scale_x_continuous(breaks=c(1, 2, 3),
+                         labels=c("Before", "Day After", "3-4 Weeks After")) +
+      scale_linetype(labels=c("Others", "Self")) +
+      labs(title="Participants Rating of What Others Look For vs. Self",
+           colour="Trait",
+           linetype="Looked For By") +
+      ylab("Rating from 1-10") +
+      xlab("Time Rated") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+##### Grouped By Type, Think Opposite Sex looks for vs. What They Rated (Depreciated)
+
+```{r}
+library(reshape2)
+
+spddat4 <- subset(spd_dat, select=c(attr2_1, attr2_2, attr2_3,
+                                    sinc2_1, sinc2_2, sinc2_3,
+                                    intel2_1, intel2_2, intel2_3,
+                                    fun2_1, fun2_2, fun2_3,
+                                    amb2_1, amb2_2, amb2_3,
+                                    pf_o_att, pf_o_sin, pf_o_int, pf_o_fun, pf_o_amb))
+attr1 <- subset(spddat4, select=c(attr2_1, attr2_2, attr2_3))
+sinc1 <- subset(spddat4, select=c(sinc2_1, sinc2_2, sinc2_3))
+intel1 <- subset(spddat4, select=c(intel2_1, intel2_2, intel2_3))
+fun1 <- subset(spddat4, select=c(fun2_1, fun2_2, fun2_3))
+amb1 <- subset(spddat4, select=c(amb2_1, amb2_2, amb2_3))
+
+attr_o <- data.frame(spddat4$pf_o_att, spddat4$pf_o_att, spddat4$pf_o_att)
+sinc_o <- data.frame(spddat4$pf_o_sin, spddat4$pf_o_sin, spddat4$pf_o_sin)
+intel_o <- data.frame(spddat4$pf_o_in, spddat4$pf_o_int, spddat4$pf_o_int)
+fun_o <- data.frame(spddat4$pf_o_fun, spddat4$pf_o_fun, spddat4$pf_o_fun)
+amb_o <- data.frame(spddat4$pf_o_amb, spddat4$pf_o_amb, spddat4$pf_o_amb)
+
+names(attr1) <- c('1', '2', '3')
+names(sinc1) <- c('1', '2', '3')
+names(intel1) <- c('1', '2', '3')
+names(fun1) <- c('1', '2', '3')
+names(amb1) <- c('1', '2', '3')
+names(attr_o) <- c('1', '2', '3')
+names(sinc_o) <- c('1', '2', '3')
+names(intel_o) <- c('1', '2', '3')
+names(fun_o) <- c('1', '2', '3')
+names(amb_o) <- c('1', '2', '3')
+
+attr1$type <- 'attr'
+sinc1$type <- 'sinc'
+intel1$type <- 'intel'
+fun1$type <- 'fun'
+amb1$type <- 'amb'
+attr_o$type <- 'attr'
+sinc_o$type <- 'sinc'
+intel_o$type <- 'intel'
+fun_o$type <- 'fun'
+amb_o$type <- 'amb'
+
+attr1$others <- 't'
+sinc1$others <- 't'
+intel1$others <- 't'
+fun1$others <- 't'
+amb1$others <- 't'
+attr_o$others <- 'o'
+sinc_o$others <- 'o'
+intel_o$others <- 'o'
+fun_o$others <- 'o'
+amb_o$others <- 'o'
+
+spddat4 <- rbind(attr1, sinc1, intel1, fun1, amb1, attr_o, sinc_o, intel_o, fun_o, amb_o)
+
+r42 <- melt(spddat4,
+           variable.name="time")
+r42 <- na.omit(r42)
+r42$time <- as.numeric(r42$time)
+summary(r42)
+```
+
+What opposite sex looks for vs. rated looking for (3s vs pf_trait_o)
+
+```{r}
+ggplot(r42, aes(x=time, y=value, color=type, group=interaction(type, others))) +
+      geom_smooth(aes(linetype=others),
+                  formula=y ~ s(x, bs = "cs", k=3)) +
+      scale_colour_discrete(labels=c("Ambitious","Attractive","Fun","Intelligent","Sincere"),
+                            type=c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0")) +
+      scale_x_continuous(breaks=c(1, 2, 3),
+                         labels=c("Before", "Day After", "3-4 Weeks After")) +
+      scale_linetype(labels=c("Actual", "Thought")) +
+      labs(title="Thought Opposite Sex Looks for vs. Actual Ratings",
+           colour="Trait",
+           linetype="Looks For") +
+      ylab("Rating from 1-100") +
+      xlab("Time Rated") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+```{r}
+type.labs = c("Ambition", "Attractiveness", "Fun", "Intelligence", "Sincerity")
+names(type.labs) = c("amb", "attr", "fun", "intel", "sinc")
+
+ggplot(r42, aes(x=as.character(time), y=value, group=others, colour=others)) +
+  geom_smooth(formula=y ~ s(x, bs = "cs", k=3)) +
+  scale_colour_discrete(labels=c("Rating", "Thought"), type=c("#7b3494", "#008837")) +
+  #scale_x_continuous(breaks=c(1, 2, 3),
+  #                   labels=c("Before", "Day After", "Weeks After")) +
+  labs(colour="Opposite Sex") +
+  xlab("Time Surveyed") +
+  ylab("Rating from 0-100") +
+  theme_light() +
+  theme(text = element_text(family="Avenir")) +
+  facet_grid(cols=vars(type), labeller=labeller(type=type.labs))
+```
+
+```{r}
+ggplot(r42, aes(x=as.character(time), y=value, group=others, colour=others)) +
+  geom_smooth(formula=y ~ s(x, bs = "cs", k=3)) +
+  scale_colour_discrete(labels=c("Rating", "Thought"), type=c("#7b3494", "#008837")) +
+  #scale_x_continuous(breaks=c(1, 2, 3),
+  #                   labels=c("Before", "Day After", "Weeks After")) +
+  ylim(c(10, 20)) +
+  labs(colour="Opposite Sex") +
+  xlab("Time Surveyed") +
+  ylab("Rating from 0-100") +
+  theme_light() +
+  theme(text = element_text(family="Avenir"))
+```
+
+##### Grouped By Type, Look for vs. Importance in Decisions
+
+```{r}
+library(reshape2)
+
+spddat43 <- subset(spd_dat, select=c(attr1_2, attr1_3,
+                                    sinc1_2, sinc1_3,
+                                    intel1_2, intel1_3,
+                                    fun1_2, fun1_3,
+                                    amb1_2, amb1_3,
+                                    attr7_2, attr7_3,
+                                    sinc7_2, sinc7_3,
+                                    intel7_2, intel7_3,
+                                    fun7_2, fun7_3,
+                                    amb7_2, amb7_3))
+attr3 <- subset(spddat43, select=c(attr1_2, attr1_3))
+sinc3 <- subset(spddat43, select=c(sinc1_2, sinc1_3))
+intel3 <- subset(spddat43, select=c(intel1_2, intel1_3))
+fun3 <- subset(spddat43, select=c(fun1_2, fun1_3))
+amb3 <- subset(spddat43, select=c(amb1_2, amb1_3))
+attr7 <- subset(spddat43, select=c(attr7_2, attr7_3))
+sinc7 <- subset(spddat43, select=c(sinc7_2, sinc7_3))
+intel7 <- subset(spddat43, select=c(intel7_2, intel7_3))
+fun7 <- subset(spddat43, select=c(fun7_2, fun7_3))
+amb7 <- subset(spddat43, select=c(amb7_2, amb7_3))
+
+names(attr3) <- c('1', '2')
+names(sinc3) <- c('1', '2')
+names(intel3) <- c('1', '2')
+names(fun3) <- c('1', '2')
+names(amb3) <- c('1', '2')
+names(attr7) <- c('1', '2')
+names(sinc7) <- c('1', '2')
+names(intel7) <- c('1', '2')
+names(fun7) <- c('1', '2')
+names(amb7) <- c('1', '2')
+
+attr3$type <- 'attr'
+sinc3$type <- 'sinc'
+intel3$type <- 'intel'
+fun3$type <- 'fun'
+amb3$type <- 'amb'
+attr7$type <- 'attr'
+sinc7$type <- 'sinc'
+intel7$type <- 'intel'
+fun7$type <- 'fun'
+amb7$type <- 'amb'
+
+attr3$actual <- 'a'
+sinc3$actual <- 'a'
+intel3$actual <- 'a'
+fun3$actual <- 'a'
+amb3$actual <- 'a'
+attr7$actual <- 'd'
+sinc7$actual <- 'd'
+intel7$actual <- 'd'
+fun7$actual <- 'd'
+amb7$actual <- 'd'
+
+spddat43 <- rbind(attr3, sinc3, intel3, fun3, amb3, attr7, sinc7, intel7, fun7, amb7)
+
+r43 <- melt(spddat43,
+           variable.name="time")
+r43 <- na.omit(r43)
+r43$time <- as.numeric(r43$time)
+summary(r43)
+```
+
+What look for vs. importance in decisions made (1s vs 7s)
+
+```{r}
+ggplot(r43, aes(x=time, y=value, color=type, group=interaction(type, actual))) +
+      #geom_point(position="jitter", alpha=0.05) +
+      geom_smooth(aes(linetype=actual),
+                  method="loess") +
+      scale_colour_discrete(labels=c("Ambitious","Attractive","Fun","Intelligent","Sincere"),
+                            type=c("#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0")) +
+      scale_x_continuous(breaks=c(1, 2),
+                         labels=c("Day After", "3-4 Weeks After")) +
+      scale_linetype(labels=c("Actual", "Thought")) +
+      labs(title="Thought Opposite Sex Looks for vs. Actual Ratings",
+           colour="Trait",
+           linetype="Looks For") +
+      ylab("Rating from 1-100") +
+      xlab("Time Rated") +
+      theme_light() +
+      theme(text = element_text(family="Avenir"))
+```
+
+#### Plot 5 Code
+
+```{r}
+spddat5 <- subset(spd_dat, select=c(you_call, them_cal, date_3))
+spddat5 <- na.omit(spddat5)
+
+ggplot(spddat5, aes(x=you_call, y=them_cal, group=date_3, colour=as.character(date_3))) +
+  geom_point(alpha=0.05) +
+  geom_smooth(formula=y ~ s(x, bs = "cs", k=5)) +
+  scale_colour_discrete(labels=c("Yes", "No"), type=c("#7b3494", "#008837")) +
+  labs(title="Matches Called",
+       colour="Went on Any Dates") +
+  ylab("Number of Matches Called") +
+  xlab("Number of Called Matches") +
+  theme_light() +
+  theme(text = element_text(family="Avenir"))
+```
+
+```{r}
+nums <- subset(spd_dat, select=c(numdat_3, num_in_3))
+nums$total <- nums$numdat_3 + nums$num_in_3
+nums <- na.omit(nums)
+nums %>% distinct() -> nums
+summary(nums)
+
+ggplot(nums, aes(x=total)) +
+  geom_histogram()
+```
+
+#### Nat Code
+
+sdnat %\>% mutate(field_cd = recode(field_cd,
+
+'1' = 'EPPS & JSOM',
+
+'2' = 'NSM, ECS, & BBS',
+
+'3' = 'NSM, ECS, & BBS',
+
+'4' = 'NSM, ECS, & BBS',
+
+'5' = 'NSM, ECS, & BBS',
+
+'6' = 'ATEC/A&H & Other',
+
+'7' = 'ATEC/A&H & Other',
+
+'8' = 'EPPS & JSOM',
+
+'9' = 'ATEC/A&H & Other',
+
+'10' = 'NSM, ECS, & BBS',
+
+'11' = 'ATEC/A&H & Other',
+
+'12' = 'ATEC/A&H & Other',
+
+'13' = 'EPPS & JSOM',
+
+'14' = 'ATEC/A&H & Other',
+
+'15' = 'ATEC/A&H & Other',
+
+'16' = 'ATEC/A&H & Other',
+
+'17' = 'NSM, ECS, & BBS',
+
+'18' = 'ATEC/A&H & Other')) -\> sdnat
+
+```{r}
+sdnat <- subset(spd_dat, select=c(field_cd, match, gender))
+# EPPS: 1 13, NSM: 2 4 10, BBS: 3, ATH: 6 7 14 15 16, ECS: 5 17, JSOM: 8, Other: 9 11 12 18
+# EPPS & JSOM: 1 8 13, NSM & ECS & BBS: 2 4 5 10 17 3, ATEC/A&H & Other: 6 7 9 11 12 14 15 16 18
+sdnat <- na.omit(sdnat)
+sdnat %>% mutate(field_cd = recode(field_cd,
+                                   '1' = 'EPPS',
+                                   '2' = 'NSM',
+                                   '3' = 'BBS',
+                                   '4' = 'NSM',
+                                   '5' = 'ECS',
+                                   '6' = 'ATEC/A&H',
+                                   '7' = 'Other',
+                                   '8' = 'JSOM',
+                                   '9' = 'Other',
+                                   '10' = 'NSM',
+                                   '11' = 'Other',
+                                   '12' = 'Other',
+                                   '13' = 'EPPS',
+                                   '14' = 'ATEC/A&H',
+                                   '15' = 'ATEC/A&H',
+                                   '16' = 'ATEC/A&H',
+                                   '17' = 'ECS',
+                                   '18' = 'Other')) -> sdnat
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (field in unique(sdnat$field_cd)) {
+  sdnat$numinf[sdnat$field_cd == field & sdnat$gender == 1] = sum(sdnat$field_cd == field &
+                                                                  sdnat$gender == 1)
+  sdnat$numm[sdnat$field_cd == field & sdnat$gender == 1] = sum(sdnat$field_cd == field &
+                                                                sdnat$match == 1 & 
+                                                                sdnat$gender == 1)
+  sdnat$numinf[sdnat$field_cd == field & sdnat$gender == 0] = sum(sdnat$field_cd == field &
+                                                                  sdnat$gender == 0)
+  sdnat$numm[sdnat$field_cd == field & sdnat$gender == 0] = sum(sdnat$field_cd == field &
+                                                                sdnat$match == 1 & 
+                                                                sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=field_cd, y=numm/numinf, color=gender)) +
+  geom_point()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(goal, match, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (goal in unique(sdnat$goal)) {
+  sdnat$numinf[sdnat$goal == goal & sdnat$gender == 1] = sum(sdnat$goal == goal &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$goal == goal & sdnat$gender == 1] = sum(sdnat$goal == goal &
+                                                           sdnat$match == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$goal == goal & sdnat$gender == 0] = sum(sdnat$goal == goal &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$goal == goal & sdnat$gender == 0] = sum(sdnat$goal == goal &
+                                                           sdnat$match == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=goal, y=numm/numinf, color=gender)) +
+  geom_point()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(go_out, match, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (go_out in unique(sdnat$go_out)) {
+  sdnat$numinf[sdnat$go_out == go_out & sdnat$gender == 1] = sum(sdnat$go_out == go_out &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$go_out == go_out & sdnat$gender == 1] = sum(sdnat$go_out == go_out &
+                                                           sdnat$match == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$go_out == go_out & sdnat$gender == 0] = sum(sdnat$go_out == go_out &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$go_out == go_out & sdnat$gender == 0] = sum(sdnat$go_out == go_out &
+                                                           sdnat$match == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=go_out, y=numm/numinf, color=gender)) +
+  geom_point() +
+  geom_line()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(date, match, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (date in unique(sdnat$date)) {
+  sdnat$numinf[sdnat$date == date & sdnat$gender == 1] = sum(sdnat$date == date &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$date == date & sdnat$gender == 1] = sum(sdnat$date == date &
+                                                           sdnat$match == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$date == date & sdnat$gender == 0] = sum(sdnat$date == date &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$date == date & sdnat$gender == 0] = sum(sdnat$date == date &
+                                                           sdnat$match == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=date, y=numm/numinf, color=gender)) +
+  geom_point() +
+  geom_line()
+```
+
+##### Next Day
+
+```{r}
+sdnat <- subset(spd_dat, select=c(field_cd, attr1_1, attr3_1, attr5_1))
+sdnat <- na.omit(sdnat)
+sdnat$numinf = 0
+for (field in unique(sdnat$field_cd)) {
+  sdnat$numinf[sdnat$field_cd == field] = sum(sdnat$field_cd == field)
+}
+summary(sdnat)
+sdnat <- sdnat[sdnat$numinf > 500,]
+summary(sdnat)
+
+importdf <- subset(sdnat, select=c(field_cd, attr1_1))
+names(importdf) <- c("Field", "Rating")
+importdf$type = 'Look For'
+importdf$Rating <- importdf$Rating/10
+
+aredf <- subset(sdnat, select=c(field_cd, attr3_1))
+names(aredf) <- c("Field", "Rating")
+aredf$type = 'Rate Self'
+
+#perdf <- subset(sdnat, select=c(field_cd, attr5_1))
+#names(perdf) <- c("Field", "Rating")
+#perdf$type = 'Say Percieved As'
+
+sdnat <- rbind(importdf, aredf) #perdf
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=as.character(Field), y=Rating, fill=type)) +
+  geom_violin() # col, boxplot, violin
+  #facet_grid(cols=vars(Field))
+```
+
+##### Match by Field
+
+```{r}
+sdnat <- subset(spd_dat, select=c(field_cd, goal, match))
+sdnat <- na.omit(sdnat)
+sdnat %>% mutate(field_cd = recode(field_cd,
+                                   '1' = 'EPPS',
+                                   '2' = 'NSM',
+                                   '3' = 'BBS',
+                                   '4' = 'NSM',
+                                   '5' = 'ECS',
+                                   '6' = 'ATEC/A&H',
+                                   '7' = 'Other',
+                                   '8' = 'JSOM',
+                                   '9' = 'Other',
+                                   '10' = 'NSM',
+                                   '11' = 'Other',
+                                   '12' = 'Other',
+                                   '13' = 'EPPS',
+                                   '14' = 'ATEC/A&H',
+                                   '15' = 'ATEC/A&H',
+                                   '16' = 'ATEC/A&H',
+                                   '17' = 'ECS',
+                                   '18' = 'Other')) -> sdnat
+sdnat %>% mutate(goal = recode(goal,
+                               '1' = "Fun Night Out",
+                               '2' = "Meet New People",
+                               '3' = "Get A Date",
+                               '4' = "Serious Relationship",
+                               '5' = "To Say I Did It",
+                               '6' = "Other")) -> sdnat
+sdnat %>% mutate(match = recode(match,
+                                '1' = "Yes",
+                                '0' = "No")) -> sdnat
+sdnat <- sdnat[sdnat$match == "Yes",]
+
+ggplot(sdnat, aes(x=field_cd, y=goal)) +
+  geom_count(colour="#9970ab") +
+  scale_size_area(max_size=18)
+```
+
+##### dec_o probabilities
+
+```{r}
+sdnat <- subset(spd_dat, select=c(field_cd, dec_o, gender))
+# EPPS: 1 13, NSM: 2 4 10, BBS: 3, ATH: 6 7 14 15 16, ECS: 5 17, JSOM: 8, Other: 9 11 12 18
+# EPPS & JSOM: 1 8 13, NSM & ECS & BBS: 2 4 5 10 17 3, ATEC/A&H & Other: 6 7 9 11 12 14 15 16 18
+sdnat <- na.omit(sdnat)
+sdnat %>% mutate(field_cd = recode(field_cd,
+                                   '1' = 'EPPS',
+                                   '2' = 'NSM',
+                                   '3' = 'BBS',
+                                   '4' = 'NSM',
+                                   '5' = 'ECS',
+                                   '6' = 'ATEC/A&H',
+                                   '7' = 'Other',
+                                   '8' = 'JSOM',
+                                   '9' = 'Other',
+                                   '10' = 'NSM',
+                                   '11' = 'Other',
+                                   '12' = 'Other',
+                                   '13' = 'EPPS',
+                                   '14' = 'ATEC/A&H',
+                                   '15' = 'ATEC/A&H',
+                                   '16' = 'ATEC/A&H',
+                                   '17' = 'ECS',
+                                   '18' = 'Other')) -> sdnat
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (field in unique(sdnat$field_cd)) {
+  sdnat$numinf[sdnat$field_cd == field & sdnat$gender == 1] = sum(sdnat$field_cd == field &
+                                                                  sdnat$gender == 1)
+  sdnat$numm[sdnat$field_cd == field & sdnat$gender == 1] = sum(sdnat$field_cd == field &
+                                                                sdnat$dec_o == 1 & 
+                                                                sdnat$gender == 1)
+  sdnat$numinf[sdnat$field_cd == field & sdnat$gender == 0] = sum(sdnat$field_cd == field &
+                                                                  sdnat$gender == 0)
+  sdnat$numm[sdnat$field_cd == field & sdnat$gender == 0] = sum(sdnat$field_cd == field &
+                                                                sdnat$dec_o == 1 & 
+                                                                sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=field_cd, y=numm/numinf, color=gender)) +
+  geom_point()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(goal, dec_o, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (goal in unique(sdnat$goal)) {
+  sdnat$numinf[sdnat$goal == goal & sdnat$gender == 1] = sum(sdnat$goal == goal &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$goal == goal & sdnat$gender == 1] = sum(sdnat$goal == goal &
+                                                           sdnat$dec_o == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$goal == goal & sdnat$gender == 0] = sum(sdnat$goal == goal &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$goal == goal & sdnat$gender == 0] = sum(sdnat$goal == goal &
+                                                           sdnat$dec_o == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=goal, y=numm/numinf, color=gender)) +
+  geom_point()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(go_out, dec_o, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (go_out in unique(sdnat$go_out)) {
+  sdnat$numinf[sdnat$go_out == go_out & sdnat$gender == 1] = sum(sdnat$go_out == go_out &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$go_out == go_out & sdnat$gender == 1] = sum(sdnat$go_out == go_out &
+                                                           sdnat$dec_o == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$go_out == go_out & sdnat$gender == 0] = sum(sdnat$go_out == go_out &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$go_out == go_out & sdnat$gender == 0] = sum(sdnat$go_out == go_out &
+                                                           sdnat$dec_o == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=go_out, y=numm/numinf, color=gender)) +
+  geom_point() +
+  geom_line()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(date, dec_o, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (date in unique(sdnat$date)) {
+  sdnat$numinf[sdnat$date == date & sdnat$gender == 1] = sum(sdnat$date == date &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$date == date & sdnat$gender == 1] = sum(sdnat$date == date &
+                                                           sdnat$dec_o == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$date == date & sdnat$gender == 0] = sum(sdnat$date == date &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$date == date & sdnat$gender == 0] = sum(sdnat$date == date &
+                                                           sdnat$dec_o == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=date, y=numm/numinf, color=gender)) +
+  geom_point() +
+  geom_line()
+```
+
+##### dec probabilities
+
+```{r}
+sdnat <- subset(spd_dat, select=c(field_cd, dec, gender))
+# EPPS: 1 13, NSM: 2 4 10, BBS: 3, ATH: 6 7 14 15 16, ECS: 5 17, JSOM: 8, Other: 9 11 12 18
+# EPPS & JSOM: 1 8 13, NSM & ECS & BBS: 2 4 5 10 17 3, ATEC/A&H & Other: 6 7 9 11 12 14 15 16 18
+sdnat <- na.omit(sdnat)
+sdnat %>% mutate(field_cd = recode(field_cd,
+                                   '1' = 'EPPS',
+                                   '2' = 'NSM',
+                                   '3' = 'BBS',
+                                   '4' = 'NSM',
+                                   '5' = 'ECS',
+                                   '6' = 'ATEC/A&H',
+                                   '7' = 'Other',
+                                   '8' = 'JSOM',
+                                   '9' = 'Other',
+                                   '10' = 'NSM',
+                                   '11' = 'Other',
+                                   '12' = 'Other',
+                                   '13' = 'EPPS',
+                                   '14' = 'ATEC/A&H',
+                                   '15' = 'ATEC/A&H',
+                                   '16' = 'ATEC/A&H',
+                                   '17' = 'ECS',
+                                   '18' = 'Other')) -> sdnat
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (field in unique(sdnat$field_cd)) {
+  sdnat$numinf[sdnat$field_cd == field & sdnat$gender == 1] = sum(sdnat$field_cd == field &
+                                                                  sdnat$gender == 1)
+  sdnat$numm[sdnat$field_cd == field & sdnat$gender == 1] = sum(sdnat$field_cd == field &
+                                                                sdnat$dec == 1 & 
+                                                                sdnat$gender == 1)
+  sdnat$numinf[sdnat$field_cd == field & sdnat$gender == 0] = sum(sdnat$field_cd == field &
+                                                                  sdnat$gender == 0)
+  sdnat$numm[sdnat$field_cd == field & sdnat$gender == 0] = sum(sdnat$field_cd == field &
+                                                                sdnat$dec == 1 & 
+                                                                sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=field_cd, y=numm/numinf, color=gender)) +
+  geom_point()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(goal, dec, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (goal in unique(sdnat$goal)) {
+  sdnat$numinf[sdnat$goal == goal & sdnat$gender == 1] = sum(sdnat$goal == goal &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$goal == goal & sdnat$gender == 1] = sum(sdnat$goal == goal &
+                                                           sdnat$dec == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$goal == goal & sdnat$gender == 0] = sum(sdnat$goal == goal &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$goal == goal & sdnat$gender == 0] = sum(sdnat$goal == goal &
+                                                           sdnat$dec == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=goal, y=numm/numinf, color=gender)) +
+  geom_point()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(go_out, dec, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (go_out in unique(sdnat$go_out)) {
+  sdnat$numinf[sdnat$go_out == go_out & sdnat$gender == 1] = sum(sdnat$go_out == go_out &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$go_out == go_out & sdnat$gender == 1] = sum(sdnat$go_out == go_out &
+                                                           sdnat$dec == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$go_out == go_out & sdnat$gender == 0] = sum(sdnat$go_out == go_out &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$go_out == go_out & sdnat$gender == 0] = sum(sdnat$go_out == go_out &
+                                                           sdnat$dec == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=go_out, y=numm/numinf, color=gender)) +
+  geom_point() +
+  geom_line()
+```
+
+```{r}
+sdnat <- subset(spd_dat, select=c(date, dec, gender))
+sdnat <- na.omit(sdnat)
+
+sdnat$numinf = 0
+sdnat$numm = 0
+for (date in unique(sdnat$date)) {
+  sdnat$numinf[sdnat$date == date & sdnat$gender == 1] = sum(sdnat$date == date &
+                                                             sdnat$gender == 1)
+  sdnat$numm[sdnat$date == date & sdnat$gender == 1] = sum(sdnat$date == date &
+                                                           sdnat$dec == 1 & 
+                                                           sdnat$gender == 1)
+  sdnat$numinf[sdnat$date == date & sdnat$gender == 0] = sum(sdnat$date == date &
+                                                             sdnat$gender == 0)
+  sdnat$numm[sdnat$date == date & sdnat$gender == 0] = sum(sdnat$date == date &
+                                                           sdnat$dec == 1 & 
+                                                           sdnat$gender == 0)
+}
+
+summary(sdnat)
+```
+
+```{r}
+ggplot(sdnat, aes(x=date, y=numm/numinf, color=gender)) +
+  geom_point() +
+  geom_line()
+```
+
+### 

@@ -1,0 +1,180 @@
+---
+title: "Preliminary plots"
+output: html_notebook
+---
+
+Load in libraries
+
+```{r}
+
+library(tidyverse)
+library(RColorBrewer)
+
+```
+
+Read in speed dating data (for preliminary graphs, only use data without nulls)
+
+```{r}
+
+data_path <- "speed_dating_data.csv"
+spd_dat <- read.csv(data_path)
+summary(spd_dat)
+
+```
+
+```{r}
+spddat_plot1 = data.frame(time=c("Before", "During", "Days After", "Weeks After",
+                                 "Before", "During", "Days After", "Weeks After")
+                           ,match=c(0, 0, 0, 0,
+                                    1, 1, 1, 1)
+                           ,shar_imp=c(mean(spd_dat[!is.na(spd_dat$shar1_1) & spd_dat$match == 0,]$shar1_1),
+                                       mean(spd_dat[!is.na(spd_dat$shar1_s) & spd_dat$match == 0,]$shar1_s),
+                                       mean(spd_dat[!is.na(spd_dat$shar7_2) & spd_dat$match == 0,]$shar7_2),
+                                       mean(spd_dat[!is.na(spd_dat$shar1_2) & spd_dat$match == 0,]$shar1_2),
+                                       mean(spd_dat[!is.na(spd_dat$shar1_1) & spd_dat$match == 1,]$shar1_1),
+                                       mean(spd_dat[!is.na(spd_dat$shar1_s) & spd_dat$match == 1,]$shar1_s),
+                                       mean(spd_dat[!is.na(spd_dat$shar7_2) & spd_dat$match == 1,]$shar7_2),
+                                       mean(spd_dat[!is.na(spd_dat$shar1_2) & spd_dat$match == 1,]$shar1_2)))
+#spd_dat <- spd_dat[!is.na(spd_dat$shar1_1),]
+#print(mean(spd_dat$shar1_1))
+spddat_plot1
+
+```
+
+Line chart over time with colors for different categories
+
+```{r}
+
+ggplot(spddat_plot1, aes(x=time, y=shar_imp, group=match, colour=as.character(match))) +
+  geom_line() +
+  geom_point() +
+  scale_colour_discrete(labels=c("No Match", "Match"), type=c("#7b3494", "#008837")) +
+  labs(title = "Importance of Shared Interests over Time Surveyed",
+       colour = "Match") +
+  xlab("Time surveyed") +
+  ylab("Importance of shared interests") +
+  theme_light() +
+  theme(text = element_text(family="Avenir")) +
+  ylim(c(11, 13))
+
+```
+
+Line chart of order vs. amount liked with match and gender
+
+```{r}
+
+spddat_plot2 <- subset(spd_dat, select=c(order, like, match, gender))
+#summary(spddat_plot2) # reveals that like column has 240 NAs
+spddat_plot2 <- na.omit(spddat_plot2)
+#spddat_plot2 <- head(spddat_plot2, 50)
+summary(spddat_plot2)
+
+```
+
+```{r}
+
+ggplot(spddat_plot2, aes(x=order, y=like, group=interaction(match, gender), color=as.character(match))) +
+  geom_smooth(aes(linetype=as.character(gender))) +
+  #geom_point(position="jitter") +
+  scale_colour_discrete(labels=c("No Match", "Match"), type=c("#7b3494", "#008837")) +
+  scale_linetype(labels=c("Female", "Male")) +
+  labs(title = "Amount liked match vs. order met",
+       colour = "Match",
+       linetype = "Gender") +
+  xlab("Order met in night") +
+  ylab("Amount liked match") +
+  theme_light() +
+  theme(text = element_text(family="Avenir")) +
+  ylim(c(1, 10))
+
+```
+
+```{r}
+
+spddat_plot3 <- subset(spd_dat, select=c(income, gender, mn_sat, age, field_cd, like))
+
+spddat_plot3$income <- gsub(",", "", spddat_plot3$income)
+spddat_plot3$income <- as.numeric(spddat_plot3$income)
+
+spddat_plot3$mn_sat <- gsub(",", "", spddat_plot3$mn_sat)
+spddat_plot3$mn_sat <- as.numeric(spddat_plot3$mn_sat)
+
+spddat_plot3 <- na.omit(spddat_plot3)
+summary(spddat_plot3)
+
+spddat_plot3 %>% distinct() -> spddat_plot3
+
+```
+
+```{r}
+
+ggplot(spddat_plot3, aes(x=mn_sat, y=income, group=gender, color=as.character(gender))) +
+  geom_point(aes(size=age), alpha=0.7) +
+  scale_y_continuous(trans="log10") +
+  scale_colour_discrete(labels=c("Female", "Male"), type=c("#7b3494", "#008837")) +
+  scale_size(range=c(2, 7), breaks=c(22, 30, 40, 55)) +
+  labs(title = "Demographics by Home Area",
+       colour = "Gender",
+       size = "Age") +
+  xlab("Median SAT Score") +
+  ylab("Income of Home Area") +
+  theme_light() +
+  theme(text = element_text(family="Avenir"))
+
+```
+
+```{r}
+
+ggplot(spddat_plot3, aes(x=field_cd, y=income, group=gender, color=as.character(gender))) +
+  geom_point(aes(size=like), alpha=0.7) +
+  scale_y_continuous(trans="log10") +
+  scale_colour_discrete(labels=c("Female", "Male"), type=c("#7b3494", "#008837")) +
+  scale_size(range=c(0.25, 6)) +
+  labs(title = "",
+       colour = "Gender",
+       size = "Amount Liked") +
+  xlab("Field of Major") +
+  ylab("Income of Home Area") +
+  theme_light() +
+  theme(text = element_text(family="Avenir"))
+
+```
+
+```{r}
+
+sdp4 <- subset(spd_dat, select=c(int_corr, shar1_1, match, wave))
+sdp4 <- na.omit(sdp4)
+summary(sdp4)
+
+```
+
+```{r}
+
+ggplot(sdp4, aes(x=shar1_1, y=int_corr, colour=as.character(match), group=match)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth() +
+  scale_colour_discrete(labels=c("No Match", "Match"), type=c("#7b3494", "#008837")) +
+  labs(title = "Interest Correlation and Importance of Shared Interest",
+       colour = "Match") +
+  xlab("Importance of Shared Interests") +
+  ylab("Interest Correlation") +
+  theme_light() +
+  theme(text = element_text(family="Avenir")) +
+  geom_hline(aes(yintercept=0))
+
+```
+
+```{r}
+
+ggplot(sdp4, aes(x=shar1_1, y=int_corr, colour=int_corr)) +
+  geom_point() +
+  scale_colour_distiller(palette = "RdYlGn") + #PRGn
+  labs(title = "Interest Correlation and Importance of Shared Interest") +
+  xlab("Importance of Shared Interests") +
+  ylab("Interest Correlation") +
+  theme_grey() +
+  theme(text = element_text(family="Avenir"),
+        legend.position = "none") +
+  geom_hline(aes(yintercept=0), color="#ffffbf")
+
+```
